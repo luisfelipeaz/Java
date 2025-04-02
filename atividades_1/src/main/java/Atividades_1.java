@@ -40,7 +40,7 @@ public class Atividades_1 {
                     break;
 
                 case 2:
-                    Recorde topo = pilha.topo();
+                    T topo = pilha.topo();
                     if (topo != null) {
                         System.out.println("Recorde no topo: " + topo);
                     }
