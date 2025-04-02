@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PilhaRecordes {
-    private List<Recorde> pilha;
+    private List<T> pilha;
     private int tamanho;
 
     public PilhaRecordes(int tamanho) {
@@ -10,7 +10,7 @@ public class PilhaRecordes {
         this.tamanho = tamanho;
     }
 
-    public void inserir(Recorde recorde) {
+    public void inserir(T recorde) {
         if (pilha.isEmpty() || recorde.getTempo() < pilha.get(pilha.size() - 1).getTempo()) {
             if (pilha.size() == tamanho) {
                 pilha.remove(0); // Remove o primeiro elemento para manter o tamanho da pilha
@@ -22,7 +22,7 @@ public class PilhaRecordes {
         }
     }
 
-    public Recorde topo() {
+    public T topo() {
         if (!pilha.isEmpty()) {
             return pilha.get(pilha.size() - 1);
         } else {
